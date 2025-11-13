@@ -1,22 +1,22 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include <limits> 
+#include <limits>
+
+#define TAM 50
 
 using namespace std;
 #include "meusIncludes.h"
 
 int main() {
-    const string nomeBase = "../veiculos.csv"; 
-    const int tamanhoMax = 50;
+    const string nomeBase = "../veiculos.csv";
 
-    Carro garagem[TAMANHO_MAX]; 
+    Carro garagem[TAM]; 
     int qtdCarros = 0;
 
-    qtdCarros = conectarBase(NOME_BASE, garagem, TAMANHO_MAX);
+    qtdCarros = conectarBase(nomeBase, garagem, TAM);
 
-    menu(garagem, TAMANHO_MAX, qtdCarros, NOME_BASE); 
+    menu(garagem, TAM, qtdCarros, nomeBase); 
 
     return 0;
-
 }
